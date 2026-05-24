@@ -1,0 +1,199 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.7;
+}
+
+/* ── Layout ── */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Navigation ── */
+
+nav {
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+
+nav .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+nav .site-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+nav .nav-links a {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #000;
+}
+
+nav .nav-links a:hover,
+nav .site-name:hover {
+  text-decoration: underline;
+}
+
+/* ── Page content ── */
+
+main {
+  padding-bottom: 80px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 6px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ── Home page ── */
+
+.profile {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+
+.profile img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+
+.profile-bio {
+  flex: 1;
+}
+
+.profile-bio h1 {
+  margin-bottom: 12px;
+}
+
+/* ── Research & Projects ── */
+
+.publication-list {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.publication-list li {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.publication-list li a {
+  font-style: italic;
+}
+
+.publication-list .authors {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.publication-list .venue {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.project-entry {
+  margin-bottom: 28px;
+}
+
+.project-entry h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.project-entry h3 a {
+  font-style: normal;
+}
+
+.project-entry p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* ── Resume page ── */
+
+.resume-embed {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.resume-fallback {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 560px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+  }
+
+  nav .nav-links {
+    gap: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+Outline what I would like for my personal website
+
+[Hosting]
+
+Should be able to just run on a github page. I think github has its own thing where you 
+can have your personal webpage there on like github.com/williamfowler
+
+[design]
+
+I would like to take inspiration from the design of https://ai-2027.com/.
+It is simplistic, black-and-white, and I like the font. Obviously, the interactive
+graphics won't be necessary as those aren't the purpose.
+
+[layout]
+
+I want to have these tabs
+ - home/about/bio
+ - research/projects
+ - resume/CV
+ - blog (just a link to my Substack: https://substack.com/@secondsycophant)
+
+[content]
+
+Later, I will give the full text for each of these, but just to give a preview:
+ - home page will just have a picture of me and my bio
+ - research/projects should be able to show a list of my research publications and then
+  open a pdf with the paper when you click on it. For projects, these can just be a link to
+  a github, but I wan't space for each of these to give a short description.
+ = resume/cv should just open my resume as a pdf
