@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policymakers Should Understand the Future of Decentralized Training — Will Fowler</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a class="site-name" href="index.html">Will Fowler</a>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="resume.html">CV</a>
+        <a href="https://substack.com/@willbfowler" target="_blank" rel="noopener">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <h1>Policymakers Should Understand the Future of Decentralized Training</h1>
+      <p class="byline">William Fowler, Konstantin Pilz</p>
+      <p class="draft-note">Draft — written during a technical AI governance fellowship at Pivotal Research, Spring 2025.</p>
+
+      <div class="post-body">
+        <p>Training frontier AI models is an enormous task that now takes over 100,000 specialized AI chips and several hundred megawatts of power. Usually, these chips are housed within a single data center to allow for ultra-high speed communications between them. However, AI companies and researchers are hoping to change this for two reasons: (1) as training runs grow in scale and require more AI chips, finding a single site which can supply the hundreds of megawatts to power these chips is becoming harder and (2) organizations outside leading AI companies hope that aggregating compute resources will allow them to train models that otherwise would have been unaffordable due to their smaller budgets.</p>
+
+        <p>Some proposals for mitigating national security risks from AI involve monitoring large AI data centers for detection and oversight of frontier AI training. Decentralized training, where companies pool multiple, smaller data centers for the purpose of a large AI training run, threatens this governance approach as companies may avoid oversight by partitioning their training run such that no number of resources used at a single data center surpass the threshold subject to monitoring.</p>
+
+        <p>Given the advantages of decentralized training, how come it hasn't been the standard from the beginning?</p>
+
+        <p>One critical blocker is network bandwidth. Distributing a training run across multiple GPUs requires communicating gradients, which are used to update model weights during training, between every GPU in the training run. For example, a 100 billion parameter model would require 200 GB of gradients to be shared upon completion of each of the hundreds of thousands of training steps.</p>
+
+        <p>The fastest version of Infiniband, a data center networking technology supplied by Nvidia, reaches speeds of 400 Gbps and can be used to connect nodes of GPUs within a single data center. Decentralized training requires communicating over significantly slower, inter-data center links.</p>
+
+        <p>The DiLoCo algorithm from Google DeepMind and its variations have sought to overcome these bandwidth limitations by lowering the amount of inter-data center communication during training. However, training runs for models over 10 billion parameters haven't been done using these techniques.</p>
+
+        <p>In addition to the challenge of limited bandwidth, decentralized training also faces the bottleneck of various engineering challenges that make it less adaptable to efficiency improvements and harder to manage than single-data center training runs. Utilizing resources across multiple cloud providers complicates this further.</p>
+
+        <p>Apart from bandwidth and engineering challenges, we also investigated latency and security as bottlenecks to decentralized training, but find neither of these disproportionately impact decentralized training compared to standard training runs.</p>
+
+        <p>The use of reinforcement learning (RL) for model post-training has been a key ingredient to the success of recent reasoning models. In general, we would expect RL tasks to be more easily distributed across multiple GPUs in a decentralized training setup since the communication requirements compared to traditional pre-training is lower. However, we would expect that algorithmic progress for RL tasks would take time to catch up to the extensive research done on parallelism algorithms for pre-training. For now, training a reasoning model requires an overwhelming majority of computational resources to be put towards pre-training.</p>
+
+        <p>We suggest that policymakers track the following metrics to assess the possibility of decentralized training runs.</p>
+
+        <ul>
+          <li>Bandwidth of existing and newly constructed inter-data center cables</li>
+          <li>Bandwidth attainable over standard Internet connection</li>
+          <li>Compute utilization of decentralized training runs</li>
+        </ul>
+
+        <p>We expect policymakers will need to be aware of the progress of decentralized training as it applies to two scenarios: (A) leading AI companies conducting frontier AI training runs across multiple data center campuses and (B) individuals or smaller AI companies conducting a collaborative decentralized training run across globally distributed AI hardware.</p>
+      </div>
+
+      <p class="post-back"><a href="research.html">&larr; Back to Research &amp; Projects</a></p>
+
+    </div>
+  </main>
+
+</body>
+</html>
